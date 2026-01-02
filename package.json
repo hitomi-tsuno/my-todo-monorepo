@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "dev": "npm-run-all -p dev:frontend dev:backend",
+    "lint": "cd frontend && npm run lint",
+    "format": "cd frontend && npm run format"
+  }
+}
