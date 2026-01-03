@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-   frontend:
+  frontend:
     name: Frontend Build
     runs-on: ubuntu-latest
     defaults:
@@ -28,14 +28,14 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-  backend:
-    name: Backend PHP Lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          clean: true
-          fetch-depth: 0
-      - name: Validate PHP syntax
-        run: |
-          find backend -name "*.php" -print0 | xargs -0 -n1 php -l
+backend:
+  name: Backend PHP Lint
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v4
+      with:
+        clean: true
+        fetch-depth: 0
+    - name: Validate PHP syntax
+      run: |
+        find backend -name "*.php" -print0 | xargs -0 -n1 php -l
