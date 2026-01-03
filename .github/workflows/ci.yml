@@ -10,13 +10,16 @@ jobs:
   frontend:
     name: Frontend Build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: cd frontend && npm ci
-      - run: cd frontend && npm run build
+      - run: npm ci
+      - run: npm run build
 
   backend:
     name: Backend PHP Lint
