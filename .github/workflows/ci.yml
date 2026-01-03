@@ -15,6 +15,8 @@ jobs:
         working-directory: frontend
     steps:
       - uses: actions/checkout@v4
+        with:
+          clean: true
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -26,6 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          clean: true
       - name: Validate PHP syntax
         run: |
           find backend -name "*.php" -print0 | xargs -0 -n1 php -l
