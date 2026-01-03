@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: frontend
+        working-directory: my-todo-monorepo/frontend
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,10 +21,8 @@ jobs:
           ref: main
 
       - run: git rev-parse HEAD
-      - run: ls -l src
-      - run: find src -maxdepth 1 -type f -print
       - run: pwd
-      - run: ls -R .
+      - run: ls -R src
 
       - uses: actions/setup-node@v4
         with:
@@ -40,6 +38,7 @@ jobs:
         with:
           clean: true
           fetch-depth: 0
+          ref: main
       - name: Validate PHP syntax
         run: |
-          find backend -name "*.php" -print0 | xargs -0 -n1 php -l
+          find my-todo-monorepo/backend -name "*.php" -print0 | xargs -0 -n1 php -l
