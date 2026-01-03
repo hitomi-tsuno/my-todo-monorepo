@@ -18,6 +18,7 @@ jobs:
         with:
           clean: true
           fetch-depth: 0
+          ref: main
 
       - run: git rev-parse HEAD
       - run: ls -l src
