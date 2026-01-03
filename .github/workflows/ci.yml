@@ -8,30 +8,22 @@ on:
 
 jobs:
   frontend:
-    name: Frontend Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout frontend
-        uses: actions/checkout@v4
-        with:
-          clean: true
-          fetch-depth: 0
-          path: frontend-src
+      - uses: actions/checkout@v4
 
-      - run: cd frontend-src/frontend && npm ci
-      - run: cd frontend-src/frontend && npm run build
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - run: cd frontend && npm ci
+      - run: cd frontend && npm run build
 
   backend:
-    name: Backend PHP Lint
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout backend
-        uses: actions/checkout@v4
-        with:
-          clean: true
-          fetch-depth: 0
-          path: backend-src
+      - uses: actions/checkout@v4
 
       - name: Validate PHP syntax
         run: |
-          find backend-src/backend -name "*.php" -print0 | xargs -0 -n1 php -l
+          find backend -name "*.php" -print0 | xargs -0 -n1 php -l
