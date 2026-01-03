@@ -19,8 +19,8 @@ jobs:
           clean: true
           fetch-depth: 0
 
+      - run: pwd
       - run: ls -R .
-      - run: ls -R src
 
       - uses: actions/setup-node@v4
         with:
