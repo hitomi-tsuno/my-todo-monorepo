@@ -12,11 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: frontend
+        working-directory: my-todo-monorepo/frontend
     steps:
       - uses: actions/checkout@v4
         with:
           clean: true
+          path: my-todo-monorepo
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -30,6 +31,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           clean: true
+          path: my-todo-monorepo
       - name: Validate PHP syntax
         run: |
-          find backend -name "*.php" -print0 | xargs -0 -n1 php -l
+          find my-todo-monorepo/backend -name "*.php" -print0 | xargs -0 -n1 php -l
