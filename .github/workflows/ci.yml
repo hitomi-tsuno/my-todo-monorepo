@@ -10,25 +10,21 @@ jobs:
   frontend:
     name: Frontend Build
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: my-todo-monorepo/frontend
     steps:
       - uses: actions/checkout@v4
         with:
           clean: true
           fetch-depth: 0
-          ref: main
 
-      - run: git rev-parse HEAD
       - run: pwd
-      - run: ls -R src
+      - run: ls -R .
 
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: npm ci
-      - run: npm run build
+
+      - run: cd frontend && npm ci
+      - run: cd frontend && npm run build
 
   backend:
     name: Backend PHP Lint
@@ -38,7 +34,7 @@ jobs:
         with:
           clean: true
           fetch-depth: 0
-          ref: main
+
       - name: Validate PHP syntax
         run: |
-          find my-todo-monorepo/backend -name "*.php" -print0 | xargs -0 -n1 php -l
+          find backend -name "*.php" -print0 | xargs -0 -n1 php -l
