@@ -29,8 +29,10 @@ npm start
 ### バックエンド（PHP）
 ```
 cd backend
-php -S localhost:8000 -t .
+php -S localhost:8000 -t public
 ```
+※ backend ディレクトリ直下に index.php があるため、ドキュメントルートは `.` を指定しています。
+
 
 ---
 
@@ -92,8 +94,7 @@ REACT_APP_API_URL=http://localhost:8000/api
 
 ### backend
 ```
-backend/.env
-DB_PATH=./data/todos.db
+DB_PATH=../data/todos.db
 LOG_PATH=./log/error.log
 ```
 
@@ -126,6 +127,8 @@ npm run format
 - [ ] React 側の検索・フィルタ機能の改善
 - [ ] GitHub Actions で CI/CD を追加
 
+更新履歴
+✅ 新規作成（2026/01/03）
 ---
 
 ## 📄 ライセンス
