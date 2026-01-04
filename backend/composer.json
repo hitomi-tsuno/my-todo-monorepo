@@ -1,0 +1,17 @@
+{
+    "name": "htsun/backend",
+    "autoload": {
+        "psr-4": {
+            "Htsun\\Backend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hitomi-tsuno",
+            "email": "h.tsuno.1234@docomo.ne.jp"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
