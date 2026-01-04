@@ -5,6 +5,7 @@ import { Todo } from "../types/todo";
 import { Filter } from "../types/filter";
 
 export const useTodos = () => {
+  const baseUrl = process.env.REACT_APP_API_URL;
   type SortKey = "completed" | "text" | "createdAt"; // ソートキーの型定義 completed: 完了状態、text: 内容、createdAt: 登録日時
   type SortOrder = "asc" | "desc"; // ソート順の型定義 asc: 昇順、desc: 降順
 
@@ -26,7 +27,7 @@ export const useTodos = () => {
 
     const fetchTodos = async () => {
       try {
-        const res = await fetch("http://localhost/api/todos.php");
+        const res = await fetch(`${baseUrl}/todos.php`);
         const data = await res.json();
 
         // ★ API のデータを React 用に変換する
@@ -45,7 +46,7 @@ export const useTodos = () => {
     };
     fetchTodos();
     isInitialized.current = true;
-  }, []);
+  }, [baseUrl]);
 
   // 保存処理
   useEffect(() => {
@@ -59,7 +60,7 @@ export const useTodos = () => {
     if (!text.trim()) return;
 
     try {
-      const res = await fetch("http://localhost/api/todos.php", {
+      const res = await fetch(`${baseUrl}/todos.php`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -91,7 +92,7 @@ export const useTodos = () => {
       const target = todos.find((todo) => todo.id === id);
       if (!target) return; // 念のため安全に
 
-      const url = new URL("http://localhost/api/todos.php");
+      const url = new URL(`${baseUrl}/todos.php`);
       url.searchParams.append("id", id.toString());
 
       const res = await fetch(url.toString(), {
@@ -117,7 +118,7 @@ export const useTodos = () => {
 
       const newIsDone = target.completed ? 0 : 1;
 
-      const url = new URL("http://localhost/api/todos.php");
+      const url = new URL(`${baseUrl}/todos.php`);
       url.searchParams.append("id", id.toString());
 
       const res = await fetch(url.toString(), {
@@ -148,7 +149,7 @@ export const useTodos = () => {
       const target = todos.find((todo) => todo.id === id);
       if (!target) return; // 念のため安全に
 
-      const url = new URL("http://localhost/api/todos.php");
+      const url = new URL(`${baseUrl}/todos.php`);
       url.searchParams.append("id", id.toString());
 
       const res = await fetch(url.toString(), {
@@ -176,7 +177,7 @@ export const useTodos = () => {
   // 一括削除
   const deleteChecked = async () => {
     try {
-      const res = await fetch("http://localhost/api/todos.php", {
+      const res = await fetch(`${baseUrl}/todos.php`, {
         method: "DELETE",
       });
 
