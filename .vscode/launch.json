@@ -1,0 +1,25 @@
+// .vscode\launch.json
+{
+    "version": "0.2.0",
+    "configurations": [
+        // React＋TypeScriptデバッグ用の設定
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "ChromeでReactアプリをデバッグ",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+            "sourceMapPathOverrides": {
+                "webpack:///src/*": "${workspaceFolder}../frontend/src/*",
+                "webpack:///*": "*",   
+            }         
+        },
+        // PHPデバッグ用の設定 php.iniでxdebug.mode=debugを有効にしておくこと
+        {
+            "name": "PHPでXdebugデバッグ",
+            "type": "php",
+            "request": "launch",
+            "port": 9003
+        }
+    ]
+}
