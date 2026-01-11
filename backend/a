@@ -1,0 +1,283 @@
+フォルダー パスの一覧:  ボリューム OS
+ボリューム シリアル番号は 924C-C407 です
+C:.
+│  .env
+│  a
+│  composer.json
+│  composer.lock
+│  
+├─api
+│      db.php
+│      todos.php
+│      
+├─data
+│      todos.db
+│      todos.json
+│      
+├─log
+├─src
+└─vendor
+    │  autoload.php
+    │  
+    ├─composer
+    │      autoload_classmap.php
+    │      autoload_files.php
+    │      autoload_namespaces.php
+    │      autoload_psr4.php
+    │      autoload_real.php
+    │      autoload_static.php
+    │      ClassLoader.php
+    │      installed.json
+    │      installed.php
+    │      InstalledVersions.php
+    │      LICENSE
+    │      platform_check.php
+    │      
+    ├─graham-campbell
+    │  └─result-type
+    │      │  .gitattributes
+    │      │  .gitignore
+    │      │  CHANGELOG.md
+    │      │  composer.json
+    │      │  LICENSE
+    │      │  phpunit.xml.dist
+    │      │  README.md
+    │      │  
+    │      ├─.github
+    │      │  │  CODE_OF_CONDUCT.md
+    │      │  │  CONTRIBUTING.md
+    │      │  │  FUNDING.yml
+    │      │  │  SECURITY.md
+    │      │  │  
+    │      │  └─workflows
+    │      │          stale.yml
+    │      │          tests.yml
+    │      │          
+    │      ├─src
+    │      │      Error.php
+    │      │      Result.php
+    │      │      Success.php
+    │      │      
+    │      └─tests
+    │              ResultTest.php
+    │              
+    ├─phpoption
+    │  └─phpoption
+    │      │  .gitattributes
+    │      │  .gitignore
+    │      │  composer.json
+    │      │  LICENSE
+    │      │  Makefile
+    │      │  phpstan-baseline.neon
+    │      │  phpstan.neon.dist
+    │      │  phpunit.xml.dist
+    │      │  README.md
+    │      │  
+    │      ├─.github
+    │      │  │  CODE_OF_CONDUCT.md
+    │      │  │  CONTRIBUTING.md
+    │      │  │  FUNDING.yml
+    │      │  │  SECURITY.md
+    │      │  │  
+    │      │  └─workflows
+    │      │          static.yml
+    │      │          tests.yml
+    │      │          
+    │      ├─src
+    │      │  └─PhpOption
+    │      │          LazyOption.php
+    │      │          None.php
+    │      │          Option.php
+    │      │          Some.php
+    │      │          
+    │      ├─tests
+    │      │  │  bootstrap.php
+    │      │  │  
+    │      │  └─PhpOption
+    │      │      └─Tests
+    │      │              EnsureTest.php
+    │      │              LazyOptionTest.php
+    │      │              NoneTest.php
+    │      │              OptionTest.php
+    │      │              SomeTest.php
+    │      │              
+    │      └─vendor-bin
+    │          └─phpstan
+    │                  composer.json
+    │                  
+    ├─symfony
+    │  ├─polyfill-ctype
+    │  │      bootstrap.php
+    │  │      bootstrap80.php
+    │  │      composer.json
+    │  │      Ctype.php
+    │  │      LICENSE
+    │  │      README.md
+    │  │      
+    │  ├─polyfill-mbstring
+    │  │  │  bootstrap.php
+    │  │  │  bootstrap80.php
+    │  │  │  composer.json
+    │  │  │  LICENSE
+    │  │  │  Mbstring.php
+    │  │  │  README.md
+    │  │  │  
+    │  │  └─Resources
+    │  │      └─unidata
+    │  │              caseFolding.php
+    │  │              lowerCase.php
+    │  │              titleCaseRegexp.php
+    │  │              upperCase.php
+    │  │              
+    │  └─polyfill-php80
+    │      │  bootstrap.php
+    │      │  composer.json
+    │      │  LICENSE
+    │      │  Php80.php
+    │      │  PhpToken.php
+    │      │  README.md
+    │      │  
+    │      └─Resources
+    │          └─stubs
+    │                  Attribute.php
+    │                  PhpToken.php
+    │                  Stringable.php
+    │                  UnhandledMatchError.php
+    │                  ValueError.php
+    │                  
+    └─vlucas
+        └─phpdotenv
+            │  .editorconfig
+            │  .gitattributes
+            │  .gitignore
+            │  composer.json
+            │  LICENSE
+            │  Makefile
+            │  phpstan-baseline.neon
+            │  phpstan.neon.dist
+            │  phpunit.xml.dist
+            │  README.md
+            │  UPGRADING.md
+            │  
+            ├─.github
+            │  │  CODE_OF_CONDUCT.md
+            │  │  CONTRIBUTING.md
+            │  │  FUNDING.yml
+            │  │  SECURITY.md
+            │  │  
+            │  └─workflows
+            │          static.yml
+            │          tests.yml
+            │          
+            ├─src
+            │  │  Dotenv.php
+            │  │  Validator.php
+            │  │  
+            │  ├─Exception
+            │  │      ExceptionInterface.php
+            │  │      InvalidEncodingException.php
+            │  │      InvalidFileException.php
+            │  │      InvalidPathException.php
+            │  │      ValidationException.php
+            │  │      
+            │  ├─Loader
+            │  │      Loader.php
+            │  │      LoaderInterface.php
+            │  │      Resolver.php
+            │  │      
+            │  ├─Parser
+            │  │      Entry.php
+            │  │      EntryParser.php
+            │  │      Lexer.php
+            │  │      Lines.php
+            │  │      Parser.php
+            │  │      ParserInterface.php
+            │  │      Value.php
+            │  │      
+            │  ├─Repository
+            │  │  │  AdapterRepository.php
+            │  │  │  RepositoryBuilder.php
+            │  │  │  RepositoryInterface.php
+            │  │  │  
+            │  │  └─Adapter
+            │  │          AdapterInterface.php
+            │  │          ApacheAdapter.php
+            │  │          ArrayAdapter.php
+            │  │          EnvConstAdapter.php
+            │  │          GuardedWriter.php
+            │  │          ImmutableWriter.php
+            │  │          MultiReader.php
+            │  │          MultiWriter.php
+            │  │          PutenvAdapter.php
+            │  │          ReaderInterface.php
+            │  │          ReplacingWriter.php
+            │  │          ServerConstAdapter.php
+            │  │          WriterInterface.php
+            │  │          
+            │  ├─Store
+            │  │  │  FileStore.php
+            │  │  │  StoreBuilder.php
+            │  │  │  StoreInterface.php
+            │  │  │  StringStore.php
+            │  │  │  
+            │  │  └─File
+            │  │          Paths.php
+            │  │          Reader.php
+            │  │          
+            │  └─Util
+            │          Regex.php
+            │          Str.php
+            │          
+            ├─tests
+            │  ├─Dotenv
+            │  │  │  DotenvTest.php
+            │  │  │  ValidatorTest.php
+            │  │  │  
+            │  │  ├─Loader
+            │  │  │      LoaderTest.php
+            │  │  │      
+            │  │  ├─Parser
+            │  │  │      EntryParserTest.php
+            │  │  │      LexerTest.php
+            │  │  │      LinesTest.php
+            │  │  │      ParserTest.php
+            │  │  │      
+            │  │  ├─Repository
+            │  │  │  │  RepositoryTest.php
+            │  │  │  │  
+            │  │  │  └─Adapter
+            │  │  │          ArrayAdapterTest.php
+            │  │  │          EnvConstAdapterTest.php
+            │  │  │          PutenvAdapterTest.php
+            │  │  │          ServerConstAdapterTest.php
+            │  │  │          
+            │  │  └─Store
+            │  │          StoreTest.php
+            │  │          
+            │  └─fixtures
+            │      └─env
+            │              .env
+            │              assertions.env
+            │              booleans.env
+            │              commented.env
+            │              empty.env
+            │              example.env
+            │              exported.env
+            │              immutable.env
+            │              integers.env
+            │              large.env
+            │              multibyte.env
+            │              multiline.env
+            │              multiple.env
+            │              mutable.env
+            │              nested.env
+            │              quoted.env
+            │              specialchars.env
+            │              unicodevarnames.env
+            │              utf8-with-bom-encoding.env
+            │              windows.env
+            │              
+            └─vendor-bin
+                └─phpstan
+                        composer.json
+                        
