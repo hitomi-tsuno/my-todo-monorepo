@@ -56,7 +56,7 @@ backend/
 ├── log/        # error.log / sql.log
 ├── css/        # スタイル（PHP版UI用）
 ├── js/         # JS（PHP版UI用）
-└── scripts/    # DB 初期化スクリプト
+└── src/        # PHPソース
 ```
 
 ### API 一覧（例）
@@ -94,7 +94,9 @@ REACT_APP_API_URL=http://mytodo.local:8080/api
 
 ### backend
 ```
-LOG_PATH=./log/error.log
+DB_PATH=../data/todos.db    #未使用です。
+DEBUG_MODE=True             #true = 開発モード, false = 本番モード
+LOG_DIR=./log
 ```
 
 ---
@@ -129,6 +131,7 @@ npm run format
 更新履歴
 ✅ 新規作成（2026/01/03）
 ✅ デバッグ環境の構築（2026/01/10）
+✅ ログ出力の追加、フォルダ構成の改善（2026/01/11）
 ---
 
 ## 📄 ライセンス
