@@ -89,12 +89,11 @@ frontend/
 ### frontend
 ```
 frontend/.env
-REACT_APP_API_URL=http://localhost:8000/api
+REACT_APP_API_URL=http://mytodo.local:8080/api
 ```
 
 ### backend
 ```
-DB_PATH=../data/todos.db
 LOG_PATH=./log/error.log
 ```
 
@@ -129,6 +128,7 @@ npm run format
 
 更新履歴
 ✅ 新規作成（2026/01/03）
+✅ デバッグ環境の構築（2026/01/10）
 ---
 
 ## 📄 ライセンス
